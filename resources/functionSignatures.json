@@ -26,6 +26,69 @@
           ],
           [
             {
+              "name": "module",
+              "kind": "ordered",
+              "type": [
+                "choices={'book','hist','files'}"
+              ]
+            }
+          ],
+          [
+            {
+              "name": "cmd1",
+              "kind": "ordered",
+              "type": [
+                "choices={'book'}"
+              ]
+            },
+            {
+              "name": "name",
+              "kind": "ordered",
+              "type": [
+                [
+                  "char"
+                ]
+              ]
+            }
+          ],
+          [
+            {
+              "name": "cmd1",
+              "kind": "ordered",
+              "type": [
+                "choices={'hist'}"
+              ]
+            },
+            {
+              "name": "index",
+              "kind": "ordered",
+              "type": [
+                [
+                  "char"
+                ]
+              ]
+            }
+          ],
+          [
+            {
+              "name": "cmd1",
+              "kind": "ordered",
+              "type": [
+                "choices={'files'}"
+              ]
+            },
+            {
+              "name": "alias",
+              "kind": "ordered",
+              "type": [
+                [
+                  "char"
+                ]
+              ]
+            }
+          ],
+          [
+            {
               "name": "cmd1",
               "kind": "ordered",
               "type": [

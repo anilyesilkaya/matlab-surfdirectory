@@ -42,6 +42,45 @@ function updateFunctionSignatures(~)
 
         groupGo = {paramGo, paramGoTarget};
 
+        %% ---------- Option: sd book <name> (implicit go) ---------------
+        paramBookImplicit = struct();
+        paramBookImplicit.name = "cmd1";
+        paramBookImplicit.kind = "ordered";
+        paramBookImplicit.type = {"choices={'book'}"};
+
+        paramBookImplicitName = struct();
+        paramBookImplicitName.name = "name";
+        paramBookImplicitName.kind = "ordered";
+        paramBookImplicitName.type = {{"char"}};
+
+        groupBook_implicit = {paramBookImplicit, paramBookImplicitName};
+
+        %% ---------- Option: sd hist <index> (implicit go) ---------------
+        paramHistImplicit = struct();
+        paramHistImplicit.name = "cmd1";
+        paramHistImplicit.kind = "ordered";
+        paramHistImplicit.type = {"choices={'hist'}"};
+
+        paramHistImplicitIdx = struct();
+        paramHistImplicitIdx.name = "index";
+        paramHistImplicitIdx.kind = "ordered";
+        paramHistImplicitIdx.type = {{"char"}};
+
+        groupHist_implicit = {paramHistImplicit, paramHistImplicitIdx};
+
+        %% ---------- Option: sd files <alias> (implicit open) ------------
+        paramFilesImplicit = struct();
+        paramFilesImplicit.name = "cmd1";
+        paramFilesImplicit.kind = "ordered";
+        paramFilesImplicit.type = {"choices={'files'}"};
+
+        paramFilesImplicitAlias = struct();
+        paramFilesImplicitAlias.name = "alias";
+        paramFilesImplicitAlias.kind = "ordered";
+        paramFilesImplicitAlias.type = {{"char"}};
+
+        groupFiles_implicit = {paramFilesImplicit, paramFilesImplicitAlias};
+
         %% ---------- Option 3: sd book <subcmd> [arg] ------------------
         paramBook = struct();
         paramBook.name = "cmd1";
@@ -144,6 +183,9 @@ function updateFunctionSignatures(~)
             {paramFolder}, ...
             {paramNav}, ...
             {paramModuleShow}, ...
+            groupBook_implicit, ...
+            groupHist_implicit, ...
+            groupFiles_implicit, ...
             groupGo, ...
             groupBook_simple, ...
             groupBook_action, ...
