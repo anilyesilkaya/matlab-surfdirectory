@@ -107,6 +107,24 @@ function updateFunctionSignatures(~)
 
         groupBook_action = {paramBook, paramBook2_action, paramBookName};
 
+        %% ---------- Option: sd book add <name> --rel -------------------
+        paramBook2_addOnly = struct();
+        paramBook2_addOnly.name = "cmd2";
+        paramBook2_addOnly.kind = "ordered";
+        paramBook2_addOnly.type = {"choices={'add'}"};
+
+        paramBookNameRel = struct();
+        paramBookNameRel.name = "name";
+        paramBookNameRel.kind = "ordered";
+        paramBookNameRel.type = {{"char"}};
+
+        paramBookRelFlag = struct();
+        paramBookRelFlag.name = "flag";
+        paramBookRelFlag.kind = "ordered";
+        paramBookRelFlag.type = {"choices={'--rel'}"};
+
+        groupBook_addRel = {paramBook, paramBook2_addOnly, paramBookNameRel, paramBookRelFlag};
+
         %% ---------- Option 4: sd hist <subcmd> [arg] ------------------
         paramHist = struct();
         paramHist.name = "cmd1";
@@ -177,6 +195,29 @@ function updateFunctionSignatures(~)
 
         groupFiles_add4 = {paramFiles, paramFiles2_add, paramFilesFilename, paramFilesAlias2};
 
+        %% ---------- Option: sd files add <filename> <alias> --rel -----
+        paramFiles2_addOnly = struct();
+        paramFiles2_addOnly.name = "cmd2";
+        paramFiles2_addOnly.kind = "ordered";
+        paramFiles2_addOnly.type = {"choices={'add'}"};
+
+        paramFilesFilenameRel = struct();
+        paramFilesFilenameRel.name = "filename";
+        paramFilesFilenameRel.kind = "ordered";
+        paramFilesFilenameRel.type = {"file=*.*"};
+
+        paramFilesAliasRel = struct();
+        paramFilesAliasRel.name = "alias";
+        paramFilesAliasRel.kind = "ordered";
+        paramFilesAliasRel.type = {{"char"}};
+
+        paramFilesRelFlag = struct();
+        paramFilesRelFlag.name = "flag";
+        paramFilesRelFlag.kind = "ordered";
+        paramFilesRelFlag.type = {"choices={'--rel'}"};
+
+        groupFiles_addRel = {paramFiles, paramFiles2_addOnly, paramFilesFilenameRel, paramFilesAliasRel, paramFilesRelFlag};
+
         %% ---------- Mutually exclusive top-level shapes ---------------
         inputStruct = struct();
         inputStruct.mutuallyExclusiveGroup = { ...
@@ -193,7 +234,9 @@ function updateFunctionSignatures(~)
             groupHist_go, ...
             groupFiles_simple, ...
             groupFiles_idx, ...
-            groupFiles_add4 ...
+            groupFiles_add4, ...
+            groupBook_addRel, ...
+            groupFiles_addRel ...
         };
 
         sdStruct = struct();
