@@ -1,0 +1,202 @@
+{
+  "_schemaVersion": "1.0.0",
+  "sd": {
+    "inputs": [
+      {
+        "mutuallyExclusiveGroup": [
+          [
+            {
+              "name": "path",
+              "kind": "ordered",
+              "type": [
+                [
+                  "folder"
+                ]
+              ]
+            }
+          ],
+          [
+            {
+              "name": "nav",
+              "kind": "ordered",
+              "type": [
+                "choices={'back','b','-','fwd','f'}"
+              ]
+            }
+          ],
+          [
+            {
+              "name": "cmd1",
+              "kind": "ordered",
+              "type": [
+                "choices={'go'}"
+              ]
+            },
+            {
+              "name": "cmd2",
+              "kind": "ordered",
+              "type": [
+                "choices={'matlabroot','root','back','b','fwd','f'}"
+              ]
+            }
+          ],
+          [
+            {
+              "name": "cmd1",
+              "kind": "ordered",
+              "type": [
+                "choices={'book'}"
+              ]
+            },
+            {
+              "name": "cmd2",
+              "kind": "ordered",
+              "type": [
+                "choices={'show','export','load','clear'}"
+              ]
+            }
+          ],
+          [
+            {
+              "name": "cmd1",
+              "kind": "ordered",
+              "type": [
+                "choices={'book'}"
+              ]
+            },
+            {
+              "name": "cmd2",
+              "kind": "ordered",
+              "type": [
+                "choices={'add','$add','remove','go'}"
+              ]
+            },
+            {
+              "name": "name",
+              "kind": "ordered",
+              "type": [
+                [
+                  "char"
+                ]
+              ]
+            }
+          ],
+          [
+            {
+              "name": "cmd1",
+              "kind": "ordered",
+              "type": [
+                "choices={'hist'}"
+              ]
+            },
+            {
+              "name": "cmd2",
+              "kind": "ordered",
+              "type": [
+                "choices={'show','clear'}"
+              ]
+            }
+          ],
+          [
+            {
+              "name": "cmd1",
+              "kind": "ordered",
+              "type": [
+                "choices={'hist'}"
+              ]
+            },
+            {
+              "name": "cmd2",
+              "kind": "ordered",
+              "type": [
+                "choices={'go'}"
+              ]
+            },
+            {
+              "name": "index",
+              "kind": "ordered",
+              "type": [
+                [
+                  "char"
+                ]
+              ]
+            }
+          ],
+          [
+            {
+              "name": "cmd1",
+              "kind": "ordered",
+              "type": [
+                "choices={'files'}"
+              ]
+            },
+            {
+              "name": "cmd2",
+              "kind": "ordered",
+              "type": [
+                "choices={'show','clear'}"
+              ]
+            }
+          ],
+          [
+            {
+              "name": "cmd1",
+              "kind": "ordered",
+              "type": [
+                "choices={'files'}"
+              ]
+            },
+            {
+              "name": "cmd2",
+              "kind": "ordered",
+              "type": [
+                "choices={'open','remove'}"
+              ]
+            },
+            {
+              "name": "alias",
+              "kind": "ordered",
+              "type": [
+                [
+                  "char"
+                ]
+              ]
+            }
+          ],
+          [
+            {
+              "name": "cmd1",
+              "kind": "ordered",
+              "type": [
+                "choices={'files'}"
+              ]
+            },
+            {
+              "name": "cmd2",
+              "kind": "ordered",
+              "type": [
+                "choices={'add','$add'}"
+              ]
+            },
+            {
+              "name": "filename",
+              "kind": "ordered",
+              "type": [
+                "file=*.*"
+              ]
+            },
+            {
+              "name": "alias",
+              "kind": "ordered",
+              "type": [
+                [
+                  "char"
+                ]
+              ]
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}
